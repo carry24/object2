@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='./Song.js'></script>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="audioPlayer" src="Song3.mp3"></audio>
+    <script>
+        let index=0;
+        let SongTitle1=document.getElementById('Songt');
+        let audio1=document.getElementById('audioPlayer');
+        let songimage=document.getElementById('songpic');
+
+        //let audio=new Audio('song.mp3');
+        
+        let playList=[{sitle:'Janam Janam', songDesc:"Movie:Dilwale", Singer:"Arjit singh",songImage:'janam.jpg',src:'Janam.mp3'},
+        {sitle:'Hauli Hauli', songDesc:"Movie:De De pyar De, Singer:Honey singh",songImage:'Pyar de.jpg',src:'Hauli.mp3'},
+        {sitle:'Coca cola', songDesc:"Movie:Luka Chhupi, Singer:Tony kakkar",songImage:'Luka.jpg',src:'coca.mp3'},
+        {sitle:'Gali Gali', songDesc:"Movie:KGF, Singer:Neha kakkar",songImage:'KGF.jpg',src:'Gali.mp3'},
+        {sitle:'Chhote Chhote peg', songDesc:"Movie:Sonu ke Titu ki sweety, Singer:Arjit singh",songImage:'Snu.jpg',src:'Chote.mp3'},
+        {sitle:'Mai tera Boyfriend', songDesc:"Movie:Raabta, Singer:Arjit singh",songImage:'Freind.jpg',src:'Boyfriend.mp3'}];
+    
+
+        function myFunction()
+        {
+            if(audio1.paused==true)
+            {
+                audio1.play();
+            }
+            else
+            {
+                audio1.pause();
+            }
+            bannerUpdate();
+        }
+        function nextSong()
+        {
+            index++;
+            if(index>playList.lenght)
+            {
+                index=0;
+            }
+            audio1.src=playList[index].src;
+            audio1.play();
+            bannerUpdate();
+        }
+        function prevsong()
+        {
+            index--;
+            if(index<0)
+            {
+                index=playList.lenght;
+            }
+
+
+            audio1.src=playList[index].src;
+            audio1.play();
+            bannerUpdate();
+        }
+        function bannerUpdate()
+        {
+            document.getElementById('songt').innerHTML=playList[index].sitle;
+            document.getElementById('songpic').src=playList[index].songImage;
+            document.getElementById('songDescription').innerHTML=playList[index].songDesc;
+            
+        }
+    
+
+
+    </script>
+    <nav>
+        <ul>
+            <li class="logo"><img src="icon.png"></i></li>
+            <li><h3 style="color:blue">Spotify</h3></li>
+        </ul>
+    </nav>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <div class="flex-container">
+                    <div class="card-container">
+                        <div class="card" style="width:14rem;">
+                            <img class="card-img-top" src="Luka.jpg" alt="card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Luka chhupi</h5>
+                                <p class="card-txet">Coca cola</p>
+                            </div>
+                        </div>
+                        </div>
+
+    <div class="card-container">
+        <div class="card" style="width:14rem;">
+            <img class="card-img-top" src="Snu.jpg" alt="card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Sonu ki Titu ki swity</h5>
+                <p class="card-txet">Chhote chhote pag</p>
+                </div>
+                </div>
+                </div>
+                <div class="card-container">
+                    <div class="card" style="width:14rem;">
+                        <img class="card-img-top" src="Freind.jpg" alt="card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Raabta</h5>
+                            <p class="card-txet">Mai tera boyfriend</p>
+                            </div>
+                            </div>
+                            </div>
+
+                            <div class="card-container">
+                                <div class="card" style="width:14rem;">
+                                    <img class="card-img-top" src="Aankh mare.jpg" alt="card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Simmba</h5>
+                                        <p class="card-txet">Aankh marey</p>
+                                        </div>
+                                        </div>
+                                        </div>
+
+
+                                        <div class="card-container">
+                                            <div class="card" style="width:14rem;">
+                                                <img class="card-img-top" src="KGF.jpg" alt="card image cap">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Kgf</h5>
+                                                    <p class="card-txet">Gali Gali</p>
+                                                    </div>
+                                                    </div>
+                                        </div>
+
+                                                    <div class="card-container">
+                                                        <div class="card" style="width:14rem;">
+                                                            <img class="card-img-top" src="janam.jpg" alt="card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Dilwale</h5>
+                                                                <p class="card-txet">Janam Janam</p>
+                                                                </div>
+                                                                </div>
+                                                                </div>
+
+
+                                        <div class="card-container">
+                                            <div class="card" style="width:14rem;">
+                                            <img class="card-img-top" src="Pyar de.jpg" alt="card image cap">
+                                            <div class="card-body">
+                                             <h5 class="card-title">De De Pyar De</h5>
+                                            <p class="card-txet">Hauli Hauli</p>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
+
+
+                                            <div class="col-4">
+                                                <div class="songBanner">
+                                               <img width=300px height=300px src="KGF.jpg" id="songpic"></img>
+                                               <h1 style="color:brown;font-size:30px;font-style:italic;font-family:'courier New',monospace;" id="songt"></h1>
+                                               <p style="color:yellow;font-size:30px;font-style:italic;font-family:'courier New',monospace;" id="songDescription"></p>
+                                               </div>
+                                               </div>
+        
+
+    <div class="col-6"><div class="container1">
+      <div class="background-image-container">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+
+    <div class="row">
+        </div>
+             <div class="bottom">
+             <input type="range" name="range" id="myprogressBar" min="0" max="100"/>
+                 <p class="p1">
+             <i class="fa fa-step-backward" aria-hidden="true" onClick="prevsong()"></i>
+            <i class="fa fa-play-circle" style="font-size:20px;" id="masterplay" onclick=myFunction()></i>
+        <i class="fa fa-step-forward" aria-hidden="true" id="next" onClick="nextSong()"></i>
+                                </p>
+                            </div>
+                        </div>
+            
+
+
+
+</body>
+</html>

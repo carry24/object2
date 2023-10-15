@@ -1,0 +1,182 @@
+body
+{
+    background-image: url("wave2.gif");
+}
+
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav ul 
+{
+    display: flex;
+    list-style-type: none;
+    background-color: black;
+    height: 55px;
+}
+
+
+.songList 
+{
+    margin-left: 5px;
+    width: 400px;
+    height: auto;
+}
+.songImage 
+{
+    width: 140px;
+    height: 140px;
+    padding: 0;
+    margin: 0;
+}
+
+
+.flex-container 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 2px solid green;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card-title,card-text
+ {
+    font-size: 20px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+
+
+
+.card-container1
+ {
+    position: absolute;
+    padding: 5px;
+    margin-bottom: 5px;
+    animation-name: moves;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+.card-container
+{
+    padding: 5px;
+    margin-bottom: 5px;
+    transition: padding 2s;
+    transition-timing-function: ease-in-out;
+}
+.card-container:hover
+{
+    padding: 20px;
+}
+@keyframes moves
+{
+    from{left:0%;};
+    to{right:100%};
+}
+
+.card-body 
+{
+    background-color: #EBB02D;
+}
+
+
+.flex-child
+ {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+.container1
+ {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-image: url("back1.jpg");
+    background-size: cover;
+    margin-left: 110px;
+    margin-right: auto;
+    min-height: 75vh;
+    border-radius: 20px;
+    top:100px;
+}
+
+
+#cover 
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+
+.songItem {
+    width: 300px;
+    height: 50px;
+    border: 5px solid green;
+    margin-left: 10px;
+    padding-top: 10px;
+    border-radius: 20px;
+}
+
+.bottom {
+    position: sticky;
+    width: 100%;
+    height: 130px;
+    background-image: linear-gradient(rgba(130, 242, 38, 0.3), rgba(21, 18, 76, 0.5));
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0px;
+    bottom: 0;
+}
+
+
+h3 {
+    font-size: 30px;
+    color: white;
+    margin: 5px;
+}
+
+.songBanner
+{
+    background-color: #FF8400;
+    border:2px groove green;
+    border-radius: 5px;
+    padding:2px;
+}
+
+.p1 {
+    color: black;
+    font-style: italic;
+    text-shadow: 2px 2px green;
+    text-align: center;
+    padding-left:90px;
+    font-size:30px;
+}
+
+
+i {
+    color: blue;
+}
+
+
+
+
+
